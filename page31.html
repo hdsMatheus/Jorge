@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse</title>
+    <style>
+      header {
+        background-color: #f6d1de;
+      }
+      .tt {
+        text-align: center;
+      }
+      img {
+        float: right;
+        height: 200px;
+        width: 200px;
+      }
+      #botaoContinue {
+        width: 100px;
+        height: 50px;
+        margin-top: 200px;
+        gap: 20px;
+      }
+      h1 {
+        color: white;
+        text-align: center;
+        background-color: #3b8eed;
+      }
+      p {
+        text-align: center;
+      }
+      body {
+        background-color: #6aa4e6;
+        color: white;
+      }
+      .pai {
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>Mathercise</h1></header>
+    <div class="pai">
+      <div class="pt1">
+        <p>
+          Escolha um cientista nos botões de opção abaixo e clique no botão
+          "Continue".
+        </p>
+        <p class="tt">
+          <input type="radio" name="fisico" value="fibo" />Leonardo Fibonacci
+        </p>
+        <p class="tt">
+          <input type="radio" name="fisico" value="albert" />Albert Einstein
+        </p>
+        <p class="tt">
+          <input type="radio" name="fisico" value="penrose" />Roger Penrose
+        </p>
+        <p class="tt">
+          <input type="radio" name="fisico" value="open" />Robert Oppenheimer
+        </p>
+      </div>
+      <div class="pt2">
+        <img src="/imagem/fibo.jfif" id="fibo-img" style="display: none" />
+        <img src="/imagem/albert.jfif" id="albert-img" style="display: none" />
+        <img src="/imagem/penrose.JPG" id="penrose-img" style="display: none" />
+        <img src="/imagem/oppen.jpg" id="open-img" style="display: none" />
+        <a href="page32.html">
+          <img
+            id="botaoContinue"
+            src="/imagem/teste.png"
+            style="display: none"
+          />
+        </a>
+      </div>
+    </div>
+    <script>
+      const radioButtons = document.querySelectorAll('input[type="radio"]');
+      radioButtons.forEach((radio) => {
+        radio.addEventListener("change", function () {
+          const selectedValue = this.value;
+          document.querySelectorAll("img").forEach((img) => {
+            img.style.display = "none";
+          });
+          document.getElementById(selectedValue + "-img").style.display =
+            "block";
+          document.getElementById("botaoContinue").style.display = "block";
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>page35</title>
+    <style>
+      h1 {
+        color: white;
+        text-align: center;
+        background-color: #3b8eed;
+      }
+      body {
+        text-align: center;
+      }
+      .aaa {
+        display: flex;
+        justify-content: center;
+      }
+      body {
+        background-color: #6aa4e6;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>MatherCise</h1>
+    <label for="frutas"
+      >Selecione o nome do Matemático que gosta bastante da páscoa</label
+    >
+    <select id="frutas" name="frutas" size="4" onchange="mostrarBotao()">
+      <option value="maca">Euclides</option>
+      <option value="banana">Leonhard Euler</option>
+      <option value="laranja">Alan Turing</option>
+      <option value="uva">Carl Friedrich Gauss</option>
+      <option value="pera">Blaise Pascal</option>
+      <option value="abacaxi">Pierre-Simon Laplace</option>
+      <option value="morango">Archimedes</option>
+      <option value="kiwi">John von Neumann</option>
+      <option value="manga">Hypatia de Alexandria</option>
+      <option value="melancia">Mary Cartwright</option>
+    </select>
+    <div class="aaa">
+      <a href="finishline.html">
+        <img id="botao" src="/imagem/teste.png" style="display: none" />
+      </a>
+    </div>
+    <script>
+      function mostrarBotao() {
+        var select = document.getElementById("frutas");
+        var botao = document.getElementById("botao");
+        if (select.value === "pera") {
+          botao.style.display = "block";
+        } else {
+          botao.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

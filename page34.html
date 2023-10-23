@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>page34</title>
+    <style>
+      h1 {
+        color: white;
+        text-align: center;
+        background-color: #3b8eed;
+      }
+      .aaa {
+        display: flex;
+        justify-content: center;
+      }
+      body {
+        background-color: #6aa4e6;
+        color: white;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>MatherCise</h1>
+    <label for="frutas">Selecione o número par</label>
+    <select id="frutas" name="frutas" size="4" onchange="mostrarBotao()">
+      <option value="maca">834562361</option>
+      <option value="banana">678356798275</option>
+      <option value="laranja">8475275683</option>
+      <option value="uva">3425766365</option>
+      <option value="pera">352384659</option>
+      <option value="abacaxi">42356321656</option>
+      <option value="morango">32487365</option>
+      <option value="kiwi">587654695625</option>
+      <option value="manga">6728943951</option>
+      <option value="melancia">4293785918373</option>
+    </select>
+    <div class="aaa">
+      <a href="page35.html">
+        <img id="botao" src="/imagem/teste.png" style="display: none" />
+      </a>
+    </div>
+    <script>
+      function mostrarBotao() {
+        var select = document.getElementById("frutas");
+        var botao = document.getElementById("botao");
+        if (select.value === "abacaxi") {
+          botao.style.display = "block";
+        } else {
+          botao.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

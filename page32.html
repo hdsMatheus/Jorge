@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>page32</title>
+    <style>
+      h1 {
+        color: white;
+        text-align: center;
+        background-color: #3b8eed;
+      }
+      body {
+        background-color: #6aa4e6;
+        text-align: center;
+        color: white;
+      }
+      .pai {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+      }
+      .pt2 {
+        padding: 20px;
+      }
+      #but {
+        width: 100px;
+        height: 50px;
+        color: black;
+        background-color: white;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title"><h1>MatherCise</h1></div>
+    <div class="pai">
+      <div class="pt1">
+        <h4>
+          A pequena caixa branca abaixo é uma caixa de lista suspensa. Clique na
+          seta triangular preta à direita para abrir a lista de opções e, a
+          seguir, clique na opção desejada.
+        </h4>
+        <p>
+          Selecione o físico que criou a teoria da relatividade geral na caixa
+          de listagem suspensa e clique no botão 'Submit'.
+        </p>
+        <form action="page33.html" method="get">
+          <label for="betinho">Escolha</label>
+          <select id="betinho" name="betinho">
+            <option value="pit">Pitágoras</option>
+            <option value="tales">Tales de Mileto</option>
+            <option value="betin">Albert Einstein</option>
+            <option value="elon">Elon Musk</option>
+            <option value="Descartes">René Descartes</option>
+            <option value="Newton">Isaac Newton</option>
+            <option value="Nicolau">Nicolau Copérnico</option>
+          </select>
+        </form>
+      </div>
+      <div class="pt2">
+        <input
+          type="submit"
+          value="Continuar"
+          id="but"
+          style="display: none"
+          href="page33.html"
+        />
+      </div>
+    </div>
+    <script>
+      let select = document.getElementById("betinho");
+      let but = document.getElementById("but");
+      select.addEventListener("change", function () {
+        if (select.value === "betin") {
+          but.style.display = "block";
+        } else {
+          but.style.display = "none";
+        }
+      });
+      but.addEventListener("click", function () {
+        location.href = "page33.html";
+      });
+    </script>
+  </body>
+</html>

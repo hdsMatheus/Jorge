@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>page27</title>
+    <style>
+      h1 {
+        color: red;
+        text-align: center;
+        background-color: aliceblue;
+      }
+      #q1 {
+        height: 200px;
+        width: 200px;
+        background-color: red;
+        color: white;
+      }
+      .q2 {
+        height: 350px;
+        width: 350px;
+        background-color: grey;
+        display: block;
+        margin: auto;
+      }
+      .joaquim {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        border: 1px solid #ccc;
+      }
+      .phoenix {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 350px;
+        border: 1px solid #ccc;
+      }
+
+      .joaquim p,
+      .phoenix p {
+        margin: 0;
+      }
+      h1 {
+        color: white;
+        text-align: center;
+        background-color: #3b8eed;
+      }
+      body {
+        background-color: #6aa4e6;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mathercise</h1>
+    <p>
+      “Clicar e arrastar” é uma forma de mover determinados objetos na tela.
+      Para mover um objeto, coloque o cursor do mouse sobre ele, pressione e
+      segure o botão esquerdo do mouse e mova o mouse. Depois de "arrastar" o
+      objeto para o local desejado, solte o botão do mouse.
+    </p>
+    <p>Clique e arraste o pi para que fique dentro do seu conjunto.</p>
+    <div draggable="true" ondragstart="onDragStart(event);" id="q1">
+      <div class="joaquim"><p>3,14159265358979323846</p></div>
+    </div>
+    <div ondrop="onDrop(event);" ondragover="onDragOver(event);" class="q2">
+      <div class="phoenix"><p>Números Irracionais</p></div>
+    </div>
+    <a href="page28.html">
+      <img id="botaoContinue" src="/imagem/teste.png" style="display: none" />
+    </a>
+    <script>
+      function onDragStart(event) {
+        event.dataTransfer.setData("text/plain", event.target.id);
+        event.currentTarget.style.backgroundColor = "red";
+      }
+      function onDragOver(event) {
+        event.preventDefault();
+      }
+      function onDrop(event) {
+        const id = event.dataTransfer.getData("text/plain");
+        const jorge = document.getElementById(id);
+        const renato = event.target;
+        renato.appendChild(jorge);
+        event.dataTransfer.clearData();
+        const botaoContinue = document.getElementById("botaoContinue");
+        botaoContinue.style.display = "block";
+      }
+    </script>
+  </body>
+</html>

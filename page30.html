@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page29</title>
+    <style>
+      h1 {
+        color: white;
+        text-align: center;
+        background-color: #3b8eed;
+      }
+      p {
+        font-size: 20px;
+      }
+      body {
+        background-color: #6aa4e6;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>MatherCise</h1>
+    <p>
+      Os botões de opção permitem escolher apenas uma opção de um grupo de
+      opções. Clique em cada um dos botões de opção abaixo para continuar.
+      (Observe que apenas um será selecionado por vez.)
+    </p>
+    <fieldset>
+      <legend>Selecione as matérias:</legend>
+
+      <div>
+        <input
+          type="radio"
+          class="1"
+          name="drone"
+          onclick="verificarcheckbox()"
+        />
+        <label for="huey">Estatística</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          class="2"
+          name="drone"
+          onclick="verificarcheckbox()"
+        />
+        <label for="dewey">Geometria Plana</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          class="3"
+          name="drone"
+          onclick="verificarcheckbox()"
+        />
+        <label for="louie">Geometria Espacial</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          class="4"
+          name="drone"
+          onclick="verificarcheckbox()"
+        />
+        <label for="huey">Trigonometria</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          class="5"
+          name="drone"
+          onclick="verificarcheckbox()"
+        />
+        <label for="dewey">Matrizes e Determinantes</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          class="6"
+          name="drone"
+          onclick="verificarcheckbox()"
+        />
+        <label for="louie">Geometria Analítica</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          class="7"
+          name="drone"
+          onclick="verificarcheckbox()"
+        />
+        <label for="huey">Função Logarítimica</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          class="8"
+          name="drone"
+          onclick="verificarcheckbox()"
+        />
+        <label for="dewey">Análise Combinatória</label>
+      </div>
+      <div>
+        <input
+          type="radio"
+          class="9"
+          name="drone"
+          onclick="verificarcheckbox()"
+        />
+        <label for="louie">Razão e Proporção</label>
+      </div>
+      <a href="page31.html">
+        <img id="botaoContinue" src="/imagem/teste.png" style="display: none" />
+      </a>
+    </fieldset>
+    <script>
+      var totalcheckbox = 9;
+      var checkboxclick = 0;
+
+      function verificarcheckbox() {
+        checkboxclick++;
+        if (checkboxclick === totalcheckbox) {
+          var botaoContinue = document.getElementById("botaoContinue");
+          if (botaoContinue) {
+            botaoContinue.style.display = "block";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

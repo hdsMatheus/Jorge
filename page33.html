@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+      , initial-scale=1.0"
+    />
+    <title>page33</title>
+    <style>
+      h1 {
+        color: white;
+        text-align: center;
+        background-color: #3b8eed;
+      }
+      body {
+        text-align: center;
+        background-color: #6aa4e6;
+        color: white;
+      }
+      .pai {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+      }
+      .pt2 {
+        padding: 20px;
+      }
+      #but {
+        width: 100px;
+        height: 50px;
+        color: black;
+        background-color: white;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title">
+      <h1>MatherCise</h1>
+    </div>
+    <div class="pai">
+      <div class="pt1">
+        <p>Selecione a afirmação incorreta</p>
+        <form action="page34.html" method="get">
+          <label for="betinho">Escolha</label>
+          <select id="betinho" name="betinho">
+            <option value="pit">2 + 2 = 4</option>
+            <option value="tales">7 x 7 = 49</option>
+            <option value="jorge">y = ax + b</option>
+            <option value="elon">ln (2) = log (2)</option>
+            <option value="carlos">2 + 2 = 5 (Se o estado quiser)</option>
+            <option value="Newton">1 + 1 = 2</option>
+            <option value="betin">ln (3) = log (5)</option>
+          </select>
+        </form>
+      </div>
+      <div class="pt2">
+        <input type="submit" value="Submit" id="but" style="display: none" />
+      </div>
+    </div>
+    <script>
+      var select = document.getElementById("betinho");
+      var but = document.getElementById("but");
+      select.addEventListener("change", function () {
+        if (select.value === "betin") {
+          but.style.display = "block";
+        } else {
+          but.style.display = "none";
+        }
+      });
+      but.addEventListener("click", function () {
+        location.href = "page34.html";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MatherCise</title>
+    <style>
+      h1 {
+        color: white;
+        text-align: center;
+        background-color: #3b8eed;
+      }
+
+      .tudo {
+        display: grid;
+        grid-template-columns: 100px 100px 100px 100px 100px;
+        grid-template-rows: 100px 100px 100px 100px 100px;
+      }
+
+      .corpo {
+        width: 200px;
+        grid-column: 3;
+        grid-row: 1;
+        margin-top: 18px;
+      }
+
+      .roupa {
+        width: 130px;
+        grid-column: 3;
+        margin-top: 55px;
+        margin-left: 30px;
+        height: 183px;
+        display: none;
+      }
+      body {
+        background-color: #6aa4e6;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>MatherCise</h1>
+    <p>Qual sua roupa para hoje?</p>
+    <div class="tudo">
+      <form>
+        <input class="checkbox1" type="checkbox" onclick="roupa()" />
+        <label>Roupa</label><br />
+        <button class="pag30" type="button" onclick="irParaPage30()">
+          Próximo
+        </button>
+      </form>
+
+      <img class="corpo" src="/imagem/a1.png" alt="corpo" />
+      <img class="roupa" src="/imagem/a3.jpg" alt="roupa" />
+    </div>
+
+    <script>
+      function irParaPage30() {
+        window.location.href = "page30.html";
+      }
+
+      function roupa() {
+        var checkbox = document.querySelector(".checkbox1");
+        var imagemRoupa = document.querySelector(".roupa");
+        var botao = document.querySelector(".pag30");
+
+        if (checkbox.checked) {
+          imagemRoupa.style.display = "block";
+          botao.style.display = "block";
+        } else {
+          imagemRoupa.style.display = "none";
+          botao.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

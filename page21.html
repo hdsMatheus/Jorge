@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse</title>
+    <style>
+      h1 {
+        color: white;
+        text-align: center;
+        background-color: #3b8eed;
+      }
+
+      .titulo2 {
+        text-align: center;
+      }
+
+      img {
+        height: 100px;
+        width: 100px;
+        margin-left: 910px;
+      }
+
+      .texto1 {
+        text-align: center;
+      }
+
+      .botoes {
+        height: 50px;
+        width: 70px;
+        margin-left: 850px;
+        display: flex;
+        gap: 100px;
+      }
+
+      table {
+        margin: 0 auto;
+        border-collapse: collapse;
+      }
+
+      table td {
+        padding: 10px;
+        text-align: center;
+      }
+
+      #continuar {
+        display: none;
+        margin: 20px auto;
+        display: block;
+      }
+      body {
+        background-color: #6aa4e6;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>MatherCise</h1>
+    <div class="pa">
+      <p>
+        <strong>Clique duas vezes </strong>em cada cada imagem ao lado e
+        prossiga para a próxima página.
+      </p>
+    </div>
+
+    <table>
+      <tr>
+        <td><img src="/imagem/albert.jfif" alt="Imagem 1" /></td>
+        <td><img src="/imagem/oppen.jpg" alt="Imagem 4" /></td>
+      </tr>
+      <tr>
+        <td><img src="/imagem/euclides.jpg" alt="Imagem 2" /></td>
+        <td><img src="/imagem/brag.jpg" alt="Imagem 5" /></td>
+      </tr>
+      <tr>
+        <td><img src="/imagem/bhask.jpg" alt="Imagem 3" /></td>
+        <td><img src="/imagem/tur.webp" alt="Imagem 6" /></td>
+      </tr>
+    </table>
+
+    <button id="continuar">Continuar</button>
+
+    <script>
+      const images = document.querySelectorAll("table img");
+
+      function hideImage(image) {
+        image.addEventListener("dblclick", () => {
+          image.style.display = "none";
+
+          const allImagesHidden = [...images].every(
+            (img) => img.style.display === "none"
+          );
+
+          if (allImagesHidden) {
+            const continuarButton = document.getElementById("continuar");
+            continuarButton.style.display = "block";
+            continuarButton.addEventListener("click", () => {
+              window.location.href = "/page22.html";
+            });
+          }
+        });
+      }
+
+      images.forEach((image) => {
+        hideImage(image);
+      });
+    </script>
+  </body>
+</html>

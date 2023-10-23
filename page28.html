@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse</title>
+    <style>
+      h1 {
+        color: white;
+        text-align: center;
+        background-color: #3b8eed;
+      }
+      fieldset {
+        width: 250px;
+      }
+      body {
+        background-color: #6aa4e6;
+        color: white;
+
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mathercise</h1>
+
+    <p>
+      As caixas de seleção permitem selecionar uma ou mais opções de um grupo de
+      opções. Clique dentro de cada uma das caixas de seleção brancas abaixo
+      para continuar. Perceba que os números estão em inglês.
+    </p>
+    <fieldset>
+      <div class="a"><input class="checkbox" type="checkbox" />One</div>
+      <div class="a"><input class="checkbox" type="checkbox" />Two</div>
+      <div class="a"><input class="checkbox" type="checkbox" />Three</div>
+      <div class="a"><input class="checkbox" type="checkbox" />Four</div>
+      <div class="a"><input class="checkbox" type="checkbox" />Five</div>
+      <div class="a"><input class="checkbox" type="checkbox" />Six</div>
+      <div class="a"><input class="checkbox" type="checkbox" />Seven</div>
+      <div class="a"><input class="checkbox" type="checkbox" />Eight</div>
+      <div class="a"><input class="checkbox" type="checkbox" />Nine</div>
+      <div class="a"><input class="checkbox" type="checkbox" />Ten</div>
+      <div class="a"><div class="button" id="bb" style="display: none">
+        <a href="page29.html"><img src="/imagem/teste.png" alt="" /></a>
+      </div>
+    </fieldset>
+    <script>
+      const checkboxes = document.querySelectorAll(".checkbox");
+      const bb = document.getElementById("bb");
+
+      function checkIfAllChecked() {
+        const allChecked = [...checkboxes].every(
+          (checkbox) => checkbox.checked
+        );
+
+        if (allChecked) {
+          bb.style.display = "block";
+        } else {
+          bb.style.display = "none";
+        }
+      }
+
+      checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener("click", checkIfAllChecked);
+      });
+    </script>
+  </body>
+</html>

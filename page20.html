@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse</title>
+    <style>
+      h1 {
+        color: white;
+        text-align: center;
+        background-color: #3b8eed;
+      }
+      .continue2 {
+        border-radius: 20px;
+        width: 100px;
+        height: 30px;
+        margin-left: 250px;
+        display: none;
+      }
+      img.c1 {
+        width: 100px;
+        height: 100px;
+        grid-column: 4;
+        grid-row: 1;
+      }
+      img.c2 {
+        width: 100px;
+        height: 100px;
+        grid-column: 4;
+        grid-row: 2;
+      }
+      img.c3 {
+        width: 100px;
+        height: 100px;
+        grid-column: 4;
+        grid-row: 3;
+      }
+      img.c4 {
+        width: 100px;
+        height: 100px;
+        grid-column: 4;
+        grid-row: 4;
+      }
+      .imagens {
+        display: grid;
+        grid-template-columns: repeat(12, 100px);
+        grid-template-rows: repeat(12, 100px);
+      }
+      img.d1 {
+        width: 50px;
+        height: 50px;
+        grid-column: 3;
+        grid-row: 1;
+        display: none;
+      }
+      img.d2 {
+        width: 50px;
+        height: 50px;
+        grid-column: 3;
+        grid-row: 2;
+        display: none;
+      }
+      img.d3 {
+        width: 50px;
+        height: 50px;
+        grid-column: 3;
+        grid-row: 3;
+        display: none;
+      }
+      img.d4 {
+        width: 50px;
+        height: 50px;
+        grid-column: 5;
+        grid-row: 1;
+        display: none;
+      }
+      a.continue2 {
+        border-radius: 20px;
+        width: 100px;
+        height: 30px;
+        grid-column: 4;
+        grid-row: 5;
+      }
+      body {
+        background-color: #6aa4e6;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title">
+      <h1>MatherCise</h1>
+    </div>
+    <p>
+      Clique em cada um dos botões abaixo para continuar para a próxima página.
+    </p>
+    <div class="imagens">
+      <img class="c1" src="/imagem/form1.webp" onclick="trocar1()" />
+      <img class="c2" src="/imagem/form2.webp" onclick="trocar2()" />
+      <img class="c3" src="/imagem/form3.png" onclick="trocar3()" />
+      <img class="c4" src="/imagem/form4.webp" onclick="trocar4()" />
+      <img class="d1" src="/imagem/checkmark1.gif" alt="verify" />
+      <img class="d2" src="/imagem/checkmark1.gif" alt="verify" />
+      <img class="d3" src="/imagem/checkmark1.gif" alt="verify" />
+      <img class="d4" src="/imagem/checkmark1.gif" alt="verify" />
+      <br /><br /><br />
+      <a href="page21.html">
+        <button>Continue</button>
+      </a>
+    </div>
+    <script>
+      var totalBotoes = 4;
+      var botoesClicados = 0;
+      var botaquejaclickei = [];
+
+      function verificarBotoesClicados() {
+        if (botoesClicados === totalBotoes) {
+          document.querySelector(".continue2").style.display = "block";
+        }
+      }
+
+      function trocar1() {
+        if (!botaquejaclickei.includes("botao1")) {
+          var imagens = document.querySelectorAll("img.d1");
+          imagens.forEach(function (imagem) {
+            imagem.style.display = "block";
+          });
+          botoesClicados++;
+          botaquejaclickei.push("botao1");
+        }
+        verificarBotoesClicados();
+      }
+
+      function trocar2() {
+        if (!botaquejaclickei.includes("botao2")) {
+          var imagens = document.querySelectorAll("img.d2");
+          imagens.forEach(function (imagem) {
+            imagem.style.display = "block";
+          });
+          botoesClicados++;
+          botaquejaclickei.push("botao2");
+        }
+        verificarBotoesClicados();
+      }
+
+      function trocar3() {
+        if (!botaquejaclickei.includes("botao3")) {
+          var imagens = document.querySelectorAll("img.d3");
+          imagens.forEach(function (imagem) {
+            imagem.style.display = "block";
+          });
+          botoesClicados++;
+          botaquejaclickei.push("botao3");
+        }
+        verificarBotoesClicados();
+      }
+
+      function trocar4() {
+        if (!botaquejaclickei.includes("botao4")) {
+          var imagens = document.querySelectorAll("img.d4");
+          imagens.forEach(function (imagem) {
+            imagem.style.display = "block";
+          });
+          botoesClicados++;
+          botaquejaclickei.push("botao4");
+        }
+        verificarBotoesClicados();
+      }
+    </script>
+  </body>
+</html>

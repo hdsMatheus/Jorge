@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>page22</title>
+    <style>
+      h1 {
+        color: white;
+        text-align: center;
+        background-color: #3b8eed;
+      }
+      .link {
+        display: flex;
+        text-align: center;
+      }
+      .header {
+        gap: 20px;
+      }
+      body {
+        background-color: #6aa4e6;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title"><h1>MatherCise</h1></div>
+    <div class="header">
+      <p>
+        Uma equação é uma sentença matemática que possui uma igualdade e, pelo
+        menos, uma incógnita, ou seja, quando temos o envolvimento de uma
+        expressão algébrica e uma igualdade.
+      </p>
+      <p>
+        O estudo de equações pede conhecimentos prévios, como o estudo sobre
+        expressões numéricas.O objetivo de uma equação é encontrar o valor da
+        incógnita que torne a igualdade em uma <br />
+        identidade, ou seja, uma igualdade verdadeira.
+      </p>
+      <p>
+        Clique no link abaixo para exibir uma equação, leia a equação e clique
+        no botão apropriado na caixa.
+      </p>
+      <a class="link" href="page23.html">Clique aqui</a>
+    </div>
+    <script type="text/javascript">
+      let valor = document.getElementsByClassName("link").item(0);
+      valor.addEventListener("click", ouvir);
+
+      function ouvir() {
+        window.confirm("a + x = b");
+      }
+    </script>
+  </body>
+</html>

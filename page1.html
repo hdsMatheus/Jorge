@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>MatherCise</title>
+    <style>
+      h1 {
+        color: white;
+        text-align: center;
+        background-color: #3b8eed;
+      }
+      .p1 {
+        text-align: center;
+      }
+      .bt {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+      }
+      body {
+        background-color: #6aa4e6;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title"><h1>MatherCise</h1></div>
+    <div class="p1">
+      <p>Seja bem Vindo ao MatherCise</p>
+      <p class="img1"><img src="imagem/fundo.gif" width="500px" /></p>
+      <p>
+        Nesse exercício você irá aprender o básico em matememática e irá parar
+        de ter medo dessa matéria tão amada. Para começar clique no número cujo
+        valor é aproximadamente 3,14159265358979323846…
+      </p>
+    </div>
+    <div class="bt">
+      <div class="b1">
+        <button onclick="chngpg() ">
+          <img src="imagem/pi.png" alt="" width="50px" height="50" />
+        </button>
+      </div>
+      <div class="b2">
+        <button onclick="c3() ">
+          <img src="imagem/download.png" alt="" width="50px" height="50" />
+        </button>
+      </div>
+    </div>
+    <script>
+      function chngpg() {
+        window.location.href = "page2.html";
+      }
+      function c3() {
+        window.location.href = "page1.1.html";
+      }
+      function count() {}
+
+      if (!localStorage.getItem("contagem1")) {
+        localStorage.setItem("contagem1", "0");
+      }
+
+      const elementosDaPagina = document.querySelectorAll("html");
+      elementosDaPagina.forEach(function (elemento) {
+        elemento.addEventListener("click", function () {
+          let contagem1 = parseInt(localStorage.getItem("contagem1"));
+          contagem1 += 1;
+          localStorage.setItem("contagem1", contagem1.toString());
+        });
+      });
+    </script>
+  </body>
+</html>
